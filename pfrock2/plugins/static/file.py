@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # coding=utf8
+import logging
 import os
 
 from tornado import gen
 from tornado.web import StaticFileHandler
+
+logger = logging.getLogger('pfrock.static')
 
 
 class FrockStaticFileHandler(StaticFileHandler):
