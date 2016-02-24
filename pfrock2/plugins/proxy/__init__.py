@@ -11,7 +11,7 @@ import tornado.iostream
 import tornado.options
 import tornado.web
 
-logger = logging.getLogger('pfrock.proxy')
+logger = logging.getLogger('pfrock2.proxy')
 
 
 def fetch_request(url, callback, **kwargs):
@@ -62,7 +62,8 @@ class ProxyHandler(tornado.web.RequestHandler):
         try:
             if 'Proxy-Connection' in self.request.headers:
                 del self.request.headers['Proxy-Connection']
-            self.request.headers["Host"] = self.header_host
+            if self.header_host:
+                self.request.headers["Host"] = self.header_host
             fetch_request(
                 request_url, handle_response,
                 method=self.request.method, body=body,
@@ -89,6 +90,10 @@ class ProxyHandler(tornado.web.RequestHandler):
         return self.get()
 
 
-def add_proxy_handler(p_frock, url, proxy_url, header_host):
+def add_proxy_handler(p_frock, url, proxy_url, header_host=""):
+    p_frock.add_handler([get_proxy_handler(url, proxy_url, header_host)])
+
+
+def get_proxy_handler(url, proxy_url, header_host=""):
     handler = (url, ProxyHandler, {"proxy_url": proxy_url, "header_host": header_host})
-    p_frock.add_handler([handler])
+    return handler
