@@ -11,6 +11,8 @@ import tornado.iostream
 import tornado.options
 import tornado.web
 
+from pfrock2.core.constants import ROUTER_METHOD, ROUTER_PROXY_URL
+
 logger = logging.getLogger('pfrock2.proxy')
 
 
@@ -23,7 +25,7 @@ def fetch_request(url, callback, **kwargs):
 class ProxyHandler(tornado.web.RequestHandler):
     SUPPORTED_METHODS = ['GET', 'POST', 'PUT', 'DELETE']
 
-    def initialize(self, proxy_url="", header_host=""):
+    def initialize(self, proxy_url="", header_host="", **kwargs):
         self.proxy_url = proxy_url
         self.header_host = header_host
 
@@ -90,10 +92,10 @@ class ProxyHandler(tornado.web.RequestHandler):
         return self.get()
 
 
-def add_proxy_handler(p_frock, url, proxy_url, header_host=""):
-    p_frock.add_handler([get_proxy_handler(url, proxy_url, header_host)])
+def add_proxy_handler(p_frock, url, methods, proxy_url, header_host=""):
+    p_frock.add_handler([get_proxy_handler(url, methods, proxy_url, header_host)])
 
 
-def get_proxy_handler(url, proxy_url, header_host=""):
-    handler = (url, ProxyHandler, {"proxy_url": proxy_url, "header_host": header_host})
+def get_proxy_handler(url, methods, proxy_url, header_host=""):
+    handler = (url, ProxyHandler, {ROUTER_METHOD: methods, ROUTER_PROXY_URL: proxy_url, "header_host": header_host})
     return handler

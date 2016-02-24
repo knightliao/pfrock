@@ -3,16 +3,29 @@
 import json
 import traceback
 
+from tornado.web import RequestHandler
+
 from pfrock2.bin import logger
 from pfrock2.core.lib import auto_str
 
 
 @auto_str
 class PfrockConfigRouter(object):
-    def __init__(self, path, handler, options):
+    SUPPORTED_METHODS = RequestHandler.SUPPORTED_METHODS
+
+    def __init__(self, path, methods, handler, options={}):
         self.path = path
         self.handler = handler
         self.options = options
+        self.methods = []
+
+        if methods == "any":
+            self.methods = []
+        else:
+            for method in methods:
+                method = method.upper()
+                if method in self.SUPPORTED_METHODS:
+                    self.methods.append(method)
 
 
 @auto_str
@@ -27,16 +40,18 @@ class PfrockConfigParser(object):
     CONFIG_ROUTER = 'routes'
     CONFIG_PORT = 'port'
     CONFIG_PATH = "path"
+    CONFIG_METHODS = "methods"
     CONFIG_HANDLER = "handler"
     CONFIG_OPTIONS = "options"
 
     @classmethod
     def _parse_router(cls, router):
         path = router[cls.CONFIG_PATH] if cls.CONFIG_PATH in router else None
+        methods = router[cls.CONFIG_METHODS] if cls.CONFIG_METHODS in router else []
         handler = router[cls.CONFIG_HANDLER] if cls.CONFIG_HANDLER in router else None
         options = router[cls.CONFIG_OPTIONS] if cls.CONFIG_OPTIONS in router else None
         if path and handler:
-            return PfrockConfigRouter(path, handler, options)
+            return PfrockConfigRouter(path, methods, handler, options)
 
     @classmethod
     def _parse_routers(cls, routers):

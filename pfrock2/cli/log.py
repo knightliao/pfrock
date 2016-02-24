@@ -24,13 +24,7 @@ def make_logging(debug_mode=False):
                 'level': 'DEBUG',
                 'class': 'logging.StreamHandler',
                 'formatter': 'simple'
-            },
-            'file': {
-                'level': 'DEBUG',
-                'class': 'logging.FileHandler',
-                'filename': 'pfrock.log',
-                'formatter': 'simple'
-            },
+            }
         },
         'loggers': {
             'root': {'level': logging_level, 'handlers': ['console']},

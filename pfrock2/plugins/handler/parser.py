@@ -2,6 +2,7 @@
 # coding=utf8
 import traceback
 
+from pfrock2.core.constants import ROUTER_METHOD
 from pfrock2.plugins.handler import import_from_file, logger
 
 KEY_URL = 'url'
@@ -10,7 +11,11 @@ KEY_HOST = 'host'
 
 class HandlerParser(object):
     @staticmethod
-    def do(path, handler_module_path, options):
+    def do(path, methods, handler_module_path, options):
+
+        if not options:
+            options = {}
+        options[ROUTER_METHOD] = methods
 
         try:
             my_class = import_from_file(handler_module_path)

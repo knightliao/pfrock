@@ -25,7 +25,7 @@ class HandlerParser(object):
                 handler_list.append(handler)
 
             if route.handler in HANDLER_MAP:
-                handlers = HANDLER_MAP[route.handler](route.path, route.options)
+                handlers = HANDLER_MAP[route.handler](route.path, route.methods, route.options)
 
                 if type(handlers) == list:
                     for handler in handlers:
@@ -33,7 +33,7 @@ class HandlerParser(object):
                 else:
                     add_handler(handlers)
             else:
-                handler = HANDLER_MAP['other'](route.path, route.handler, route.options)
+                handler = HANDLER_MAP['other'](route.path, route.methods, route.handler, route.options)
                 add_handler(handler)
 
         return handler_list
