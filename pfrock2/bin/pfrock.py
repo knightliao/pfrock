@@ -7,7 +7,7 @@ from pfrock2.cli.config_parser import PfrockConfigParser
 from pfrock2.cli.log import make_logging
 from pfrock2.cli.logo import print_logo
 from pfrock2.core import PFrock
-from pfrock2.core.dispatcher import HandlerDispatcher
+from pfrock2.core.handler_parser import HandlerParser
 
 pfrockfile = 'pfrockfile.json'
 
@@ -23,7 +23,7 @@ def run_pfrock():
 
     # parser
     config_server = PfrockConfigParser.do(pfrockfile)
-    handlers = HandlerDispatcher.get_handlers(config_server)
+    handlers = HandlerParser.get_handlers(config_server)
 
     #
     p_frock = PFrock(auto_reload=not no_watch, port=config_server.port)

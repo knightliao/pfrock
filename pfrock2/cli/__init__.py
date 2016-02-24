@@ -2,7 +2,6 @@
 # coding=utf8
 
 import argparse
-import json
 
 
 def argument_parser():

@@ -12,7 +12,7 @@ HANDLER_MAP = {
 }
 
 
-class HandlerDispatcher(object):
+class HandlerParser(object):
     @classmethod
     def get_handlers(cls, config_server):
         routes = config_server.routes
