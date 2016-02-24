@@ -23,8 +23,14 @@ class FrockStaticFileHandler(StaticFileHandler):
     def get_handler(url, options):
         file_path = options['file'] if 'file' in options else ""
         path = options['path'] if 'path' in options else ""
+
         if file_path and path:
             real_url = url[0:url.rfind('/') + 1] + path
             handler = (real_url, FrockStaticFileHandler, {"path": file_path})
             return handler
+
+        if file_path:
+            handler = (url, FrockStaticFileHandler, {"path": file_path})
+            return handler
+
         return None
