@@ -33,5 +33,11 @@ setup(
         'Programming Language :: Python :: 3',
     ], requires=['tornado'],
     install_requires=reqs,
-    scripts=['pfrock/bin/pfrockbin.py']
+    
+    entry_points={
+        'console_scripts': [
+            'pfrockpy = pfrock.bin.main:run_pfrock',
+        ],
+    }
+
 )
