@@ -38,7 +38,7 @@ setup(
     data_files=[('pfrock', ['pfrock/logo.txt'])],
     entry_points={
         'console_scripts': [
-            'pfrockpy = pfrock.console_scripts:run_pfrock',
+            'pfrockpy = pfrock.console_scripts:main',
         ],
     }
 
