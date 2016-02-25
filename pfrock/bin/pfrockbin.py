@@ -1,13 +1,14 @@
-#!/usr/bin/env python
+#!/usr/bin/python2
+
 # coding=utf8
 import time
 
-from pfrock2.cli import argument_parser
-from pfrock2.cli.config_parser import PfrockConfigParser
-from pfrock2.cli.log import make_logging
-from pfrock2.cli.logo import print_logo
-from pfrock2.core import PFrock
-from pfrock2.core.handler_parser import HandlerParser
+from pfrock.cli import argument_parser
+from pfrock.cli.config_parser import PfrockConfigParser
+from pfrock.cli.log import make_logging
+from pfrock.cli.logo import print_logo
+from pfrock.core import PFrock
+from pfrock.core.handler_parser import HandlerParser
 
 pfrockfile = 'pfrockfile.json'
 
@@ -35,3 +36,7 @@ def run_pfrock():
         p_frock.start()
     except KeyboardInterrupt:
         pass
+
+
+if __name__ == "__main__":
+    run_pfrock()

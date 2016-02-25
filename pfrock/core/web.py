@@ -3,7 +3,7 @@
 import tornado
 from tornado.web import RedirectHandler, _unquote_or_none, ErrorHandler
 
-from pfrock2.core.constants import ROUTER_METHOD
+from pfrock.core.constants import ROUTER_METHOD
 
 
 class MyApplication(tornado.web.Application):

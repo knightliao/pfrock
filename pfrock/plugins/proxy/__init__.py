@@ -11,7 +11,7 @@ import tornado.iostream
 import tornado.options
 import tornado.web
 
-from pfrock2.core.constants import ROUTER_METHOD, ROUTER_PROXY_URL
+from pfrock.core.constants import ROUTER_METHOD, ROUTER_PROXY_URL
 
 logger = logging.getLogger('pfrock2.proxy')
 

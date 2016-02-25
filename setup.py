@@ -32,5 +32,6 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
     ], requires=['tornado'],
-    install_requires=reqs
+    install_requires=reqs,
+    scripts=['pfrock/bin/pfrockbin.py']
 )

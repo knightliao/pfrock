@@ -6,7 +6,7 @@ import tornado.autoreload
 import tornado.ioloop
 import tornado.web
 
-from pfrock2.core.web import MyApplication
+from pfrock.core.web import MyApplication
 
 logger = logging.getLogger('pfrock2.core')
 

@@ -4,7 +4,7 @@ import logging
 
 from tornado.web import StaticFileHandler
 
-from pfrock2.core.constants import ROUTER_METHOD, ROUTER_PATH, ROUTER_STATIC_DIR
+from pfrock.core.constants import ROUTER_METHOD, ROUTER_PATH, ROUTER_STATIC_DIR
 
 logger = logging.getLogger('pfrock.static')
 

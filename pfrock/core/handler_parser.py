@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding=utf8
-from pfrock2.core import logger
-from pfrock2.plugins.handler.parser import HandlerParser
-from pfrock2.plugins.proxy.parser import ProxyHandlerParser
-from pfrock2.plugins.static.parser import StaticHandlerParser
+from pfrock.core import logger
+from pfrock.plugins.handler.parser import HandlerParser
+from pfrock.plugins.proxy.parser import ProxyHandlerParser
+from pfrock.plugins.static.parser import StaticHandlerParser
 
 HANDLER_MAP = {
     'pfrock-proxy': ProxyHandlerParser.do,

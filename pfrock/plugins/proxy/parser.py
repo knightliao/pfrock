@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding=utf8
-from pfrock2.plugins.proxy import get_proxy_handler
+from pfrock.plugins.proxy import get_proxy_handler
 
 KEY_URL = 'url'
 KEY_HOST = 'host'

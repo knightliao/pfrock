@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding=utf8
-from pfrock2.core.constants import ROUTER_STATIC_DIR, ROUTER_STATIC_FILE, ROUTER_PATH
-from pfrock2.plugins.static.dir import FrockStaticDirHandler
-from pfrock2.plugins.static.file import FrockStaticFileHandler
+from pfrock.core.constants import ROUTER_STATIC_DIR, ROUTER_STATIC_FILE, ROUTER_PATH
+from pfrock.plugins.static.dir import FrockStaticDirHandler
+from pfrock.plugins.static.file import FrockStaticFileHandler
 
 SUPPORT_TYPE = [ROUTER_STATIC_DIR, ROUTER_STATIC_FILE]
 

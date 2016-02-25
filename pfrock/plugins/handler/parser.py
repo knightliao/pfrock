@@ -2,8 +2,8 @@
 # coding=utf8
 import traceback
 
-from pfrock2.core.constants import ROUTER_METHOD
-from pfrock2.plugins.handler import import_from_file, logger
+from pfrock.core.constants import ROUTER_METHOD
+from pfrock.plugins.handler import import_from_file, logger
 
 KEY_URL = 'url'
 KEY_HOST = 'host'

@@ -5,8 +5,8 @@ import traceback
 
 from tornado.web import RequestHandler
 
-from pfrock2.bin import logger
-from pfrock2.core.lib import auto_str
+from pfrock.bin import logger
+from pfrock.core.lib import auto_str
 
 
 @auto_str

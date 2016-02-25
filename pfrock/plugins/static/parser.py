@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding=utf8
-from pfrock2.core.constants import ROUTER, ROUTER_STATIC_FILE, ROUTER_STATIC_DIR
-from pfrock2.plugins.static import FrockStaticDirHandler, FrockStaticFileHandler
+from pfrock.core.constants import ROUTER, ROUTER_STATIC_FILE, ROUTER_STATIC_DIR
+from pfrock.plugins.static import FrockStaticDirHandler, FrockStaticFileHandler
 
 STATIC_HANDLER_MAP = {
     ROUTER_STATIC_DIR: FrockStaticDirHandler.get_handler,

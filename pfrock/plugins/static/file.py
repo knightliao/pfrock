@@ -6,7 +6,7 @@ import os
 from tornado import gen
 from tornado.web import StaticFileHandler
 
-from pfrock2.core.constants import ROUTER_PATH, ROUTER_METHOD, ROUTER_STATIC_FILE
+from pfrock.core.constants import ROUTER_PATH, ROUTER_METHOD, ROUTER_STATIC_FILE
 
 logger = logging.getLogger('pfrock.static')
 

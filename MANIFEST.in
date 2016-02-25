@@ -1,2 +1,2 @@
 include requirements.txt
-include pfrock2/bin/logo.txt
+include pfrock/bin/logo.txt
