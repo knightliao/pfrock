@@ -2,6 +2,9 @@
 # coding=utf8
 
 import argparse
+import logging
+
+logger = logging.getLogger('pfrock.cli')
 
 
 def argument_parser():

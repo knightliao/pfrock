@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # coding=utf8
+import logging
+
 from pfrock.core.constants import ROUTER_STATIC_DIR, ROUTER_STATIC_FILE, ROUTER_PATH
 from pfrock.plugins.static.dir import FrockStaticDirHandler
 from pfrock.plugins.static.file import FrockStaticFileHandler
 
 SUPPORT_TYPE = [ROUTER_STATIC_DIR, ROUTER_STATIC_FILE]
+
+logger = logging.getLogger('pfrock.static')
 
 
 def get_static_resolve_handler(cur_type):

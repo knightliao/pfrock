@@ -13,7 +13,7 @@ import tornado.web
 
 from pfrock.core.constants import ROUTER_METHOD, ROUTER_PROXY_URL
 
-logger = logging.getLogger('pfrock2.proxy')
+logger = logging.getLogger('pfrock.proxy')
 
 
 def fetch_request(url, callback, **kwargs):

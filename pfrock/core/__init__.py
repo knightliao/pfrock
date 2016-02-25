@@ -8,7 +8,7 @@ import tornado.web
 
 from pfrock.core.web import MyApplication
 
-logger = logging.getLogger('pfrock2.core')
+logger = logging.getLogger('pfrock.core')
 
 
 class PFrock(object):

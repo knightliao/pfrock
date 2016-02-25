@@ -1,5 +1,4 @@
-#!/usr/bin/python2
-
+#!/usr/bin/env python
 # coding=utf8
 import time
 
@@ -13,7 +12,7 @@ from pfrock.core.handler_parser import HandlerParser
 pfrockfile = 'pfrockfile.json'
 
 
-def run_pfrock():
+def main():
     # argument parser
     debug, no_watch = argument_parser()
 
@@ -39,4 +38,4 @@ def run_pfrock():
 
 
 if __name__ == "__main__":
-    run_pfrock()
+    main()

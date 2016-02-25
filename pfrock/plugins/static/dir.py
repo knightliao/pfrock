@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # coding=utf8
-import logging
 
 from tornado.web import StaticFileHandler
 
 from pfrock.core.constants import ROUTER_METHOD, ROUTER_PATH, ROUTER_STATIC_DIR
-
-logger = logging.getLogger('pfrock.static')
 
 
 class FrockStaticDirHandler(StaticFileHandler):

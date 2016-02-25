@@ -4,7 +4,7 @@
 import importlib
 import logging
 
-logger = logging.getLogger('pfrock2.handler')
+logger = logging.getLogger('pfrock.handler')
 
 
 def import_from_file(class_path):
