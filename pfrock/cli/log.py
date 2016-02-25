@@ -29,9 +29,9 @@ def make_logging(debug_mode=False):
         'loggers': {
             'root': {'level': logging_level, 'handlers': ['console']},
             'tornado': {'level': logging_level, 'handlers': ['console']},
-            'pfrock2': {'level': logging_level, 'handlers': ['console']},
-            'pfrock2.proxy': {'level': logging_level, 'handlers': ['console']},
-            'pfrock2.static': {'level': logging_level, 'handlers': ['console']}
+            'pfrock': {'level': logging_level, 'handlers': ['console']},
+            'pfrock.proxy': {'level': logging_level, 'handlers': ['console']},
+            'pfrock.static': {'level': logging_level, 'handlers': ['console']}
         }
     }
 
