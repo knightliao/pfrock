@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 
 from pip.req import parse_requirements
 from setuptools import setup, find_packages
 
-f = open(os.path.join(os.path.dirname(__file__), 'readme.md'))
+f = open(os.path.join(os.path.dirname(__file__), 'README.md'))
 readme = f.read()
 f.close()
 
@@ -21,8 +23,7 @@ setup(
     author='knightliao',
     author_email='knightliao@gmail.com',
     url='http://github.com/knightliao',
-    include_package_data=True,
-    zip_safe=False,
+    platforms='any',
     packages=find_packages(exclude=['tests', 'tests.*']),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -31,12 +32,13 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-    ], requires=['tornado'],
+    ],
+    requires=['tornado'],
     install_requires=reqs,
-    
+    data_files=[('pfrock', ['pfrock/logo.txt'])],
     entry_points={
         'console_scripts': [
-            'pfrockpy = pfrock.bin.main:run_pfrock',
+            'pfrockpy = pfrock.console_scripts:run_pfrock',
         ],
     }
 
