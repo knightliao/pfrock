@@ -21,8 +21,9 @@ class HandlerParser(object):
         for route in routes:
 
             def add_handler(handler):
-                logger.debug("add : " + str(handler))
-                handler_list.append(handler)
+                if handler:
+                    logger.debug("add : " + str(handler))
+                    handler_list.append(handler)
 
             if route.handler in HANDLER_MAP:
                 handlers = HANDLER_MAP[route.handler](route.path, route.methods, route.options)

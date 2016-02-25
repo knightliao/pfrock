@@ -17,7 +17,7 @@ reqs = [str(ir.req) for ir in install_reqs]
 
 setup(
     name='pfrock',
-    version='0.1',
+    version='0.2',
     description='A plugin-based tool for running fake HTTP and socket services using Python.',
     long_description=readme,
     author='knightliao',
@@ -36,6 +36,7 @@ setup(
     requires=['tornado'],
     install_requires=reqs,
     data_files=[('pfrock', ['pfrock/logo.txt'])],
+    scripts=[],
     entry_points={
         'console_scripts': [
             'pfrockpy = pfrock.console_scripts:main',
