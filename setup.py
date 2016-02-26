@@ -5,7 +5,7 @@ import os
 from pip.req import parse_requirements
 from setuptools import setup, find_packages
 
-f = open(os.path.join(os.path.dirname(__file__), 'README.md'))
+f = open(os.path.join(os.path.dirname(__file__), 'README-en.md'))
 readme = f.read()
 f.close()
 
