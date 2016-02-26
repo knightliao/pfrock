@@ -60,7 +60,6 @@ setup(
     ],
     requires=['tornado'],
     install_requires=reqs,
-    data_files=[('pfrock', ['pfrock/logo.txt'])],
     scripts=[],
     entry_points={
         'console_scripts': [
