@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # coding=utf8
 
-
-class PfrockPlugin(object):
-    def get_handler(self, options, **kwargs):
-        raise NotImplementedError()
+PLUGIN_CLASS_GET_HANDLER = 'get_handler'
+PLUGIN_CLASS_KEY_REGISTER = '__register__'

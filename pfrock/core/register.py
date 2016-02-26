@@ -1,30 +1,28 @@
 #!/usr/bin/env python
 # coding=utf8
 from pfrock.core import logger
-from pfrock.core.plugin import PfrockPlugin
+from pfrock.core.plugin import PLUGIN_CLASS_KEY_REGISTER, PLUGIN_CLASS_GET_HANDLER
 
 
 class PfrockPluginRegister(object):
     register_class_plugins = {}
 
     @classmethod
-    def register(cls, handler_class):
-        r_index = handler_class.__module__.rfind('.')
-        module = handler_class.__module__[0:r_index]
+    def register(cls, module_class, module_name):
 
-        bases = handler_class.__bases__
-        for base in bases:
-            if base == PfrockPlugin:
+        if hasattr(module_class, PLUGIN_CLASS_KEY_REGISTER):
 
-                invert_op = getattr(handler_class, PfrockPlugin.get_handler.__name__, None)
-                if callable(invert_op):
-                    cls.register_class_plugins[module] = handler_class
-                    # logger.debug("register plugin %s " % handler_class)
-                    return
-                else:
-                    logger.warn("cannot find parser_to_handlers in %s " % handler_class)
+            handler_class = getattr(module_class, PLUGIN_CLASS_KEY_REGISTER)
+            invert_op = getattr(handler_class, PLUGIN_CLASS_GET_HANDLER, None)
+            if callable(invert_op):
+                cls.register_class_plugins[module_name] = handler_class
+                # logger.debug("register plugin %s " % handler_class)
+                return
+            else:
+                logger.warn("cannot find %s in %s " % (PLUGIN_CLASS_GET_HANDLER, handler_class))
+                return
 
-        logger.warn("cannot register plugin %s " % handler_class)
+        logger.warn("cannot find %s in %s " % (PLUGIN_CLASS_KEY_REGISTER, module_class))
 
     @classmethod
     def get_handler(cls, module_name):

@@ -5,20 +5,22 @@ import traceback
 
 from pfrock.core import logger
 from pfrock.core.constants import ROUTER_METHOD
-from pfrock.core.plugin import PfrockPlugin
+from pfrock.core.plugin import PLUGIN_CLASS_GET_HANDLER
 from pfrock.core.register import PfrockPluginRegister
 
 
 class RoutesMgr(object):
     @classmethod
-    def _import_route(cls, route):
+    def _import_route(cls, module_name):
 
         # import
         try:
-            importlib.import_module(route)
+            module_class = importlib.import_module(module_name)
+
+            PfrockPluginRegister.register(module_class, module_name)
             return True
         except:
-            logger.warn("cannot import plugin handler %s \n %s" % (route, traceback.format_exc()))
+            logger.warn("cannot import plugin handler %s \n %s" % (module_name, traceback.format_exc()))
             return False
 
     @classmethod
@@ -27,9 +29,9 @@ class RoutesMgr(object):
         try:
 
             handlers = getattr(register_handler_class(),
-                               PfrockPlugin.get_handler.__name__)(one_route.options,
-                                                                  path=one_route.path,
-                                                                  methods=one_route.methods)
+                               PLUGIN_CLASS_GET_HANDLER)(one_route.options,
+                                                         path=one_route.path,
+                                                         methods=one_route.methods)
 
             real_handlers = []
             if handlers:
