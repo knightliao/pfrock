@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # coding=utf8
+
+import os
+import sys
 import time
 
 import pfrock
@@ -14,6 +17,8 @@ pfrockfile = 'pfrockfile.json'
 
 
 def main():
+    sys.path.insert(0, os.getcwd())
+
     # argument parser
     debug, no_watch = argument_parser()
 
