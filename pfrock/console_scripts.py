@@ -2,6 +2,7 @@
 # coding=utf8
 import time
 
+import pfrock
 from pfrock.cli import argument_parser
 from pfrock.cli.config_parser import PfrockConfigParser
 from pfrock.cli.log import make_logging
@@ -19,6 +20,7 @@ def main():
     # log
     make_logging(debug)
     print_logo()
+    print "pfrock version %s " % pfrock.__version__
     time.sleep(1)
 
     # parser
