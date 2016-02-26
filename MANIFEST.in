@@ -1,1 +1,3 @@
-include *.md *.rst *.txt
+include *.md
+include *.rst
+include *.txt
