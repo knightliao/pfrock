@@ -8,7 +8,7 @@ from pfrock.cli.config_parser import PfrockConfigParser
 from pfrock.cli.log import make_logging
 from pfrock.cli.logo import print_logo
 from pfrock.core import PFrock
-from pfrock.core.handler_parser import HandlerParser
+from pfrock.core.routes import RoutesMgr
 
 pfrockfile = 'pfrockfile.json'
 
@@ -25,18 +25,21 @@ def main():
 
     # parser
     config_server = PfrockConfigParser.do(pfrockfile)
-    handlers = HandlerParser.get_handlers(config_server)
 
-    #
-    p_frock = PFrock(auto_reload=not no_watch, port=config_server.port)
-    p_frock.add_watch(pfrockfile)
-    p_frock.add_handler(handlers)
+    # routes
+    if config_server:
+        route_list = RoutesMgr.get_routes(config_server)
 
-    # start
-    try:
-        p_frock.start()
-    except KeyboardInterrupt:
-        pass
+        # new frock
+        p_frock = PFrock(auto_reload=not no_watch, port=config_server.port)
+        p_frock.add_watch(pfrockfile)
+        p_frock.add_handler(route_list)
+
+        # start
+        try:
+            p_frock.start()
+        except KeyboardInterrupt:
+            pass
 
 
 if __name__ == "__main__":

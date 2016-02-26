@@ -43,6 +43,7 @@ setup(
     author_email='knightliao@gmail.com',
     url='https://github.com/knightliao/pfrock',
     platforms='any',
+    license="http://www.apache.org/licenses/LICENSE-2.0",
     packages=find_packages(exclude=['tests', 'tests.*']),
     classifiers=[
         'Intended Audience :: Developers',
