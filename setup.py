@@ -60,7 +60,7 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
     package_data={
-        'pfrock': ['pfrock/logo.txt'],
+        'pfrock': ['logo.txt'],
     },
     install_requires=reqs,
     scripts=[],
