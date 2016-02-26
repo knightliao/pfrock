@@ -25,4 +25,4 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 https://pypi.python.org/pypi/pfrock
 
 - dev(develop branch): 0.2.1.dev1
-- master(stable branch)：
+- master(stable branch)：0.2.1.dev1
