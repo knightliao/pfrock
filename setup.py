@@ -59,7 +59,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
-    requires=['tornado'],
+    data_files=[('pfrock', ['pfrock/logo.txt'])],
     install_requires=reqs,
     scripts=[],
     entry_points={
