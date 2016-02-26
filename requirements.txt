@@ -1,1 +1,4 @@
 tornado
+pfrock-proxy-plugin
+pfrock-http-plugin
+pfrock-static-plugin
