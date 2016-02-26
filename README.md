@@ -16,10 +16,6 @@ plugin based for 微服务mock服务 using python.
      
 https://github.com/knightliao/pfrock/blob/master/README-en.md
      
-## pypi 
-
-
-
 ## pypi
 
 https://pypi.python.org/pypi/pfrock
