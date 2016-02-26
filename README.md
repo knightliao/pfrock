@@ -1,6 +1,6 @@
 # pfrock
 
-plugin based for 微服务mock服务 using python.
+A plugin-based server for running fake HTTP and socket services (especially SOA service) using Python.
     
        _ (`-.            _  .-')                          .-. .-')
       ( (OO  )          ( \( -O )                         \  ( OO )
