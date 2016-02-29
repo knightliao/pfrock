@@ -25,7 +25,7 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
     - 使用pfrock来提供统一mock服务
     - 通过mock接口，修改配置文件，无须重启pfrock，快速进行接口式开发
     - 联调过程和测试过程，亦可通过pfrock来进行部分接口mock
-- 插件式开发，为可扩展性提供良好支持。支持 静态/动态/自定义 的Mock服务能力
+- 插件式开发，即插即用, 为可扩展性提供良好支持。目前已经支持 静态/动态/自定义 的Mock服务能力
 
 ## 可用的插件 
 
