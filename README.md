@@ -41,11 +41,11 @@ https://github.com/knightliao/pfrock-demos
 
 https://pypi.python.org/pypi/pfrock
 
-- dev(develop branch): 0.2.1.dev16
-- master(stable branch)：0.2.1.dev16
+- dev(develop branch): 0.2.1.a1
+- master(stable branch)：0.2.1.a1
 
 ## 安装 
 
-pip install pfrock==0.2.1.dev16
+pip install pfrock==0.2.1.a1
 
 ## 使用指南
