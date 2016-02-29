@@ -34,17 +34,21 @@ def main():
     # routes
     if config_server:
         route_list = RoutesMgr.get_routes(config_server)
-
         # new frock
         p_frock = PFrock(auto_reload=not no_watch, port=config_server.port)
-        p_frock.add_watch(pfrockfile)
-        p_frock.add_handler(route_list)
+    else:
+        route_list = []
+        # new frock
+        p_frock = PFrock(auto_reload=not no_watch)
 
-        # start
-        try:
-            p_frock.start()
-        except KeyboardInterrupt:
-            pass
+    p_frock.add_watch(pfrockfile)
+    p_frock.add_handler(route_list)
+
+    # start
+    try:
+        p_frock.start()
+    except KeyboardInterrupt:
+        pass
 
 
 if __name__ == "__main__":
