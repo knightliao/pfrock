@@ -22,7 +22,7 @@ class PFrock(object):
         self.app.add_handlers(".*$", handlers)
 
     def start(self):
-        self.app.listen(8888)
+        self.app.listen(self.port)
         tornado.ioloop.IOLoop.current().start()
 
     def add_watch(self, watch_file):
