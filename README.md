@@ -25,7 +25,7 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 
 - 为微服务架构（SOA）而生。
     - 可以mock微服务架构（SOA）中各式各样的服务接口请求
-    - 统一的mock服务。通过提供统一的router入口和自定义的sub-routers来实现
+    - 统一的代理服务入口。通过提供统一的router入口, 用户不必一个一个接口的去对接mock. 统一接入代理服务即可.
 - 强大的功能
     - 配置文件式设计，零开发成本
     - 更改配置文件，无须重启，自动生效
@@ -63,6 +63,53 @@ pip install pfrock==0.2.3
             - __init__.py
         - __init__.py
         - pfrockfile.json        
+
+### 配置文件
+
+    {
+        "servers": [
+            {
+                "port": 8888,
+                "routes": [
+                    {
+                        "path": "/api1/(.*)",
+                        "handler": "pfrock_static_plugin",
+                        "options": {
+                            "routes": [
+                                {
+                                    "path": "json",
+                                    "file": "mocks/static/a.json"
+                                },
+                                {
+                                    "dir": "mocks/static"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path": "/api",
+                        "methods": [
+                            "GET"
+                        ],
+                        "handler": "pfrock_http_plugin",
+                        "options": {
+                            "handler": "mocks.handler.hello_world.HelloWorldHandler",
+                            "query": "1!",
+                            "pageno": 1
+                        }
+                    },
+                    {
+                        "path": ".*",
+                        "methods": "any",
+                        "handler": "pfrock_proxy_plugin",
+                        "options": {
+                            "url": "http://www.sov5.com"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 
 ### 启动
 
@@ -110,6 +157,10 @@ pip install pfrock==0.2.3
 ### 代理能力
 
     ➜  ~  curl 'http://localhost:8888/'
+
+没有匹配到的URL 自动被 路由到 设定的 域名和端口上.    
+    
+这里是被路由到 http://www.sov5.com
         
 ## Tutorial
 
