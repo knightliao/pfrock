@@ -12,6 +12,10 @@ A plugin-based server for running fake HTTP and socket services (especially SOA 
      |  |       \|  |_)  |  |\  \    `'  '-'  '(_'  '--'\ |  |\   \
      `--'        `--'    `--' '--'     `-----'    `-----' `--' '--'
 
+## requirements
+
+python >=2.7 
+
 ## 开发进度
 
 - dev(develop branch): 0.2.5
