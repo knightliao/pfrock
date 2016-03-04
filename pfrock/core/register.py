@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # coding=utf8
-from pfrock.core import logger
+import logging
+
 from pfrock.core.plugin import PLUGIN_CLASS_KEY_REGISTER, PLUGIN_CLASS_GET_HANDLER
+
+logger = logging.getLogger('pfrock.register')
 
 
 class PfrockPluginRegister(object):

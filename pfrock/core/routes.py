@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # coding=utf8
 import importlib
+import logging
 import traceback
 
-from pfrock.core import logger
 from pfrock.core.constants import ROUTER_METHOD
 from pfrock.core.plugin import PLUGIN_CLASS_GET_HANDLER
 from pfrock.core.register import PfrockPluginRegister
+
+logger = logging.getLogger('pfrock.routes')
 
 
 class RoutesMgr(object):
@@ -71,7 +73,7 @@ class RoutesMgr(object):
 
             def add_route(route):
                 if route:
-                    logger.debug("add : " + str(route))
+                    logger.debug("add : %s %s %s " % (route[0], route[1].__name__, route[2]))
                     route_list.append(route)
 
             if cls._import_route(route.handler):

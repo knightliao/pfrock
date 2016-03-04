@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 # coding=utf8
+import logging
+import pprint
+
 import tornado
 from tornado.web import RedirectHandler, _unquote_or_none, ErrorHandler
 
 from pfrock.core.constants import ROUTER_METHOD
+
+logger = logging.getLogger('pfrock.web')
 
 
 class MyApplication(tornado.web.Application):
@@ -16,6 +21,16 @@ class MyApplication(tornado.web.Application):
         dispatcher = _MyRequestDispatcher(self, None)
         dispatcher.set_request(request)
         return dispatcher.execute()
+
+    def log_request(self, handler):
+        request_time = 1000.0 * handler.request.request_time()
+
+        if logger.isEnabledFor(logging.DEBUG):
+            logger.info("%d %s %.2fms \n %s", handler.get_status(),
+                        handler._request_summary(), request_time, pprint.pformat(handler.request))
+        else:
+            logger.info("%d %s %.2fms", handler.get_status(),
+                        handler._request_summary(), request_time)
 
 
 class _MyRequestDispatcher(tornado.web._RequestDispatcher):
