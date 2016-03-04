@@ -1,0 +1,44 @@
+{
+    "servers": [
+        {
+            "port": 8888,
+            "routes": [
+                {
+                    "path": "/api1/(.*)",
+                    "handler": "pfrock_static_plugin",
+                    "options": {
+                        "routes": [
+                            {
+                                "path": "json",
+                                "file": "mocks/static/a.json"
+                            },
+                            {
+                                "dir": "mocks/static"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "path": "/api",
+                    "methods": [
+                        "GET"
+                    ],
+                    "handler": "pfrock_http_plugin",
+                    "options": {
+                        "handler": "mocks.handler.hello_world.HelloWorldHandler",
+                        "query": "1!",
+                        "pageno": 1
+                    }
+                },
+                {
+                    "path": ".*",
+                    "methods": "any",
+                    "handler": "pfrock_proxy_plugin",
+                    "options": {
+                        "url": "http://www.sov5.com"
+                    }
+                }
+            ]
+        }
+    ]
+}
