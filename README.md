@@ -34,13 +34,18 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
     - 插件式开发，即插即用, 为可扩展性提供良好支持。目前系统核心已经支持 静态/动态/自定义 的Mock服务能力
     - 开放性，利用python动态能力，可以与各种中间件交互，登录redis/Q/db/hadoop
 
+也就是说,
+
+- 我们可以随心所欲的对任何URL, 任何method进行mock.
+- 并且可以对不想mock的URL, 还是让他请求原来要请求的服务.
+
+通过此种方式, 我们可以以最低的侵入性, 实现为系统的部分或者全部接口进行mock. 
+
 ## 可用的插件 
 
 - [pfrock-static-plugin](https://github.com/knightliao/pfrock-static-plugin) :提供文件式或目录结构的静态数据mock服务插件 
 - [pfrock-http-plugin](https://github.com/knightliao/pfrock-http-plugin) : 提供动态http服务请求的mock服务插件
 - [pfrock-proxy-plugin](https://github.com/knightliao/pfrock-proxy-plugin): 提供远程服务的代理服务插件 
-
-
 
 ## 快速安装 
 
@@ -169,6 +174,9 @@ pip install pfrock==0.2.3
 - [Tutorial-0: 目录结构推荐](https://github.com/knightliao/pfrock/wiki/Tutorial-0)
 - [Tutorial-1: 静态配置服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-1)
 - [Tutorial-2: 动态mock服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-2)
+- [Tutorial-3: 代理服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-3)
+- [Tutorial-4: 统一的pfrock服务](https://github.com/knightliao/pfrock/wiki/Tutorial-4)
+- [pfrock命令介绍](https://github.com/knightliao/pfrock/wiki/pfrock)
 
 ## more demos
 
