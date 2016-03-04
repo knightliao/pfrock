@@ -117,12 +117,13 @@ pip install pfrock==0.2.2
 
 https://github.com/knightliao/pfrock-demos
 
-## 建议
+## 敏捷开发建议
 
-- 建议按以下方式进行敏捷开发
-    - 服务间定好接口
-    - 使用pfrock来提供统一mock服务
-    - 通过mock接口，修改配置文件，无须重启pfrock，快速进行接口式开发
-    - 联调过程和测试过程，亦可通过pfrock来进行部分接口mock
+建议按以下方式进行敏捷开发
+
+- 服务间定好接口
+- 使用pfrock来提供统一mock服务
+- 通过mock接口，修改配置文件，无须重启pfrock，快速进行接口式开发
+- 联调过程和测试过程，亦可通过pfrock来进行部分接口mock
 
 
