@@ -126,4 +126,10 @@ https://github.com/knightliao/pfrock-demos
 - 通过mock接口，修改配置文件，无须重启pfrock，快速进行接口式开发
 - 联调过程和测试过程，亦可通过pfrock来进行部分接口mock, 避免部分服务不稳定影响整体服务能力
 
+## 群·联系·讨论
 
+- pfrock技术QQ群: 545511264 
+- 搜索引擎推荐：[sov5搜索引擎, 支持谷歌网页搜索和电影搜索](http://sov5.com)
+- [disconf](https://github.com/knightliao/disconf) Distributed Configuration Management Platform(分布式配置管理平台)
+- python论坛推荐：[Django中国社区](http://www.django-china.cn/)
+- 我的微信：knightliao
