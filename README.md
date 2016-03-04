@@ -124,6 +124,6 @@ https://github.com/knightliao/pfrock-demos
 - 服务间定好接口
 - 使用pfrock来提供统一mock服务
 - 通过mock接口，修改配置文件，无须重启pfrock，快速进行接口式开发
-- 联调过程和测试过程，亦可通过pfrock来进行部分接口mock
+- 联调过程和测试过程，亦可通过pfrock来进行部分接口mock, 避免部分服务不稳定影响整体服务能力
 
 
