@@ -12,6 +12,11 @@ A plugin-based server for running fake HTTP and socket services (especially SOA 
      |  |       \|  |_)  |  |\  \    `'  '-'  '(_'  '--'\ |  |\   \
      `--'        `--'    `--' '--'     `-----'    `-----' `--' '--'
 
+## 开发进度
+
+- dev(develop branch): 0.2.2
+- master(stable branch)：0.2.2
+
 ## English readme
      
 https://github.com/knightliao/pfrock/blob/master/README-en.md
@@ -33,19 +38,22 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 - [pfrock-http-plugin](https://github.com/knightliao/pfrock-http-plugin) : 提供动态http服务请求的mock服务插件
 - [pfrock-proxy-plugin](https://github.com/knightliao/pfrock-proxy-plugin): 提供远程服务的代理服务插件 
 
-## demos and Quick-Start
+## demos
 
 https://github.com/knightliao/pfrock-demos
 
-## pypi
-
-https://pypi.python.org/pypi/pfrock
-
-- dev(develop branch): 0.2.2
-- master(stable branch)：0.2.2
-
-## 安装 
+## 快速安装 
 
 pip install pfrock==0.2.2
 
-## 使用指南
+(pypi: https://pypi.python.org/pypi/pfrock)
+
+## Quick-Start
+
+### 配置文件
+
+
+## Tutorial
+
+
+

@@ -61,6 +61,7 @@ setup(
     ],
     package_data={
         'pfrock': ['logo.txt'],
+        'demo': ['pfrockfile.json'],
     },
     install_requires=reqs,
     scripts=[],
