@@ -115,6 +115,7 @@ pip install pfrock==0.2.3
 
 - [Tutorial-0: 目录结构推荐](https://github.com/knightliao/pfrock/wiki/Tutorial-0)
 - [Tutorial-1: 静态配置服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-1)
+- [Tutorial-2: 动态mock服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-2)
 
 ## more demos
 
