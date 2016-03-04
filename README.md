@@ -14,8 +14,8 @@ A plugin-based server for running fake HTTP and socket services (especially SOA 
 
 ## 开发进度
 
-- dev(develop branch): 0.2.2
-- master(stable branch)：0.2.2
+- dev(develop branch): 0.2.3
+- master(stable branch)：0.2.3
 
 ## English readme
      
@@ -44,7 +44,7 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 
 ## 快速安装 
 
-pip install pfrock==0.2.2
+pip install pfrock==0.2.3
 
 (pypi: https://pypi.python.org/pypi/pfrock)
 
