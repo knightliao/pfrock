@@ -29,7 +29,7 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 - 强大的功能
     - 配置文件式设计，零开发成本
     - 更改配置文件，无须重启，自动生效
-    - 输入自定义匹配 url, method; 输出自定义 静态文件/静态目录/动态handler/header
+    - 输入自定义匹配 url, method(GET/POST/PUT/DELETE/HEAD); 输出自定义 静态文件/静态目录/动态handler/header
 - 开放式设计
     - 插件式开发，即插即用, 为可扩展性提供良好支持。目前系统核心已经支持 静态/动态/自定义 的Mock服务能力
     - 开放性，利用python动态能力，可以与各种中间件交互，登录redis/Q/db/hadoop
@@ -81,35 +81,18 @@ pip install pfrock==0.2.2
     pfrock version 0.2.2
     [I 2016-03-04 14:07:05,231 pfrock.core MainThread __init__:19] started server 8888 with autoreload mod
     
-### 静态文件 json请求
+### 静态文件 json get 请求
 
     ➜  ~  curl http://localhost:8888/api1/json
     {
       "a": "bddd33e34"
     }%
 
-### 静态目录 json get 请求
+### 静态文件 json post请求
 
-    ➜  ~  curl -v http://localhost:8888/api1/b.json
-    *   Trying 127.0.0.1...
-    * Connected to localhost (127.0.0.1) port 8888 (#0)
-    > GET /api1/b.json HTTP/1.1
-    > Host: localhost:8888
-    > User-Agent: curl/7.43.0
-    > Accept: */*
-    >
-    < HTTP/1.1 200 OK
-    < Content-Length: 18
-    < Accept-Ranges: bytes
-    < Server: TornadoServer/4.3
-    < Last-Modified: Fri, 04 Mar 2016 06:11:58 GMT
-    < Etag: "a0b604ab6dcf3ec7dda01fba7fbb61f3"
-    < Date: Fri, 04 Mar 2016 06:12:00 GMT
-    < Content-Type: application/json
-    <
+    ➜  ~  curl -X POST -d {} http://localhost:8888/api1/json
     {
-        "b": "bbb"
-    * Connection #0 to host localhost left intact
+      "a": "bddd33e34"
     }%
 
 ### 静态目录 json get 请求
@@ -119,7 +102,7 @@ pip install pfrock==0.2.2
         "b": "bbb"
     }%
 
-### 动态能力
+### 动态能力 get
 
     ➜  ~  curl 'http://localhost:8888/api'
     Hello, world 1! 1%                                                                                                                                            ➜  ~
