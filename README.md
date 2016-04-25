@@ -23,8 +23,8 @@ python >=2.7
 
 ## 开发进度
 
-- dev(develop branch): 0.2.6
-- master(stable branch)：0.2.6
+- dev(develop branch): 0.2.7
+- master(stable branch)：0.2.7
 
 ## English readme
      
@@ -59,7 +59,7 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 
 ## 快速安装 
 
-pip install pfrock==0.2.6
+pip install pfrock==0.2.7
 
 (pypi: https://pypi.python.org/pypi/pfrock)
 
