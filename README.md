@@ -15,7 +15,7 @@ A plugin-based server for running fake HTTP and socket services (especially SOA 
 ## updates
 
 - [Updates](https://github.com/knightliao/pfrock/wiki/updates)
-- New: [Tutorial-5: 具有参数规则引擎计算规则服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-5)
+- New: [Tutorial-5: 具有参数规则引擎计算服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-5)
 
 ## requirements
 
@@ -183,7 +183,7 @@ pip install pfrock
 
 - [Tutorial-0: 目录结构推荐](https://github.com/knightliao/pfrock/wiki/Tutorial-0)
 - [Tutorial-1: 静态配置服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-1)
-- [Tutorial-5: 具有参数规则引擎计算规则服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-5)
+- [Tutorial-5: 具有参数规则引擎计算服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-5)
 - [Tutorial-2: 动态mock服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-2)
 - [Tutorial-3: 代理服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-3)
 - [Tutorial-4: 统一的pfrock服务](https://github.com/knightliao/pfrock/wiki/Tutorial-4)
