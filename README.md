@@ -33,7 +33,8 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 - 强大的功能
     - 配置文件式设计，零开发成本
     - 更改配置文件，无须重启，自动生效
-    - 输入自定义匹配 url, method(GET/POST/PUT/DELETE/HEAD); 输出自定义 静态文件/静态目录/动态handler/header
+    - 集成静态参数规则计算引擎，通过参数规则配置，可以根据参数的不同将请求定位到不同的静态配置。
+    - 输入自定义匹配 url, method(GET/POST/PUT/DELETE/HEAD); 输出可为自定义 静态文件/静态目录/动态handler/header
 - 开放式设计
     - 插件式开发，即插即用, 为可扩展性提供良好支持。目前系统核心已经支持 静态/动态/自定义 的Mock服务能力
     - 开放性，利用python动态能力，可以与各种中间件交互，登录redis/Q/db/hadoop
@@ -47,13 +48,13 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 
 ## 可用的插件 
 
-- [pfrock-static-plugin](https://github.com/knightliao/pfrock-static-plugin) :提供文件式或目录结构的静态数据mock服务插件 
+- [pfrock-static-plugin](https://github.com/knightliao/pfrock-static-plugin) :提供文件式或目录结构的静态数据mock服务插件，具有参数规则计算引擎功能
 - [pfrock-http-plugin](https://github.com/knightliao/pfrock-http-plugin) : 提供动态http服务请求的mock服务插件
 - [pfrock-proxy-plugin](https://github.com/knightliao/pfrock-proxy-plugin): 提供远程服务的代理服务插件 
 
 ## 快速安装 
 
-pip install pfrock==0.2.5
+pip install pfrock==0.2.6
 
 (pypi: https://pypi.python.org/pypi/pfrock)
 
@@ -177,6 +178,7 @@ pip install pfrock==0.2.5
 
 - [Tutorial-0: 目录结构推荐](https://github.com/knightliao/pfrock/wiki/Tutorial-0)
 - [Tutorial-1: 静态配置服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-1)
+- [Tutorial-5: 具有参数规则引擎计算规则服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-5)
 - [Tutorial-2: 动态mock服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-2)
 - [Tutorial-3: 代理服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-3)
 - [Tutorial-4: 统一的pfrock服务](https://github.com/knightliao/pfrock/wiki/Tutorial-4)
@@ -199,6 +201,6 @@ https://github.com/knightliao/pfrock-demos
 
 - pfrock技术QQ群: 545511264 
 - 搜索引擎推荐：[sov5搜索引擎, 支持谷歌网页搜索和电影搜索](http://sov5.com)
-- [disconf](https://github.com/knightliao/disconf) Distributed Configuration Management Platform(分布式配置管理平台)
 - python论坛推荐：[Django中国社区](http://www.django-china.cn/)
 - 我的微信：knightliao
+
