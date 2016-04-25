@@ -59,7 +59,7 @@ https://github.com/knightliao/pfrock/blob/master/README-en.md
 
 ## 快速安装 
 
-pip install pfrock==0.2.7
+pip install pfrock
 
 (pypi: https://pypi.python.org/pypi/pfrock)
 
