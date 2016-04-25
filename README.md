@@ -12,6 +12,11 @@ A plugin-based server for running fake HTTP and socket services (especially SOA 
      |  |       \|  |_)  |  |\  \    `'  '-'  '(_'  '--'\ |  |\   \
      `--'        `--'    `--' '--'     `-----'    `-----' `--' '--'
 
+## updates
+
+- [Updates](https://github.com/knightliao/pfrock/wiki/updates)
+- New: [Tutorial-5: 具有参数规则引擎计算规则服务能力](https://github.com/knightliao/pfrock/wiki/Tutorial-5)
+
 ## requirements
 
 python >=2.7 
