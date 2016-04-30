@@ -21,6 +21,10 @@ A plugin-based server for running fake HTTP and socket services (especially SOA 
 
 python >=2.7 
 
+## js version
+
+https://github.com/urbanairship/frock
+
 ## 开发进度
 
 - dev(develop branch): 0.2.7
