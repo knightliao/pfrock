@@ -2,7 +2,7 @@
 pfrock
 ======
 
-A plugin-based tool for running fake HTTP and socket services using Python.
+A plugin-based tool for running fake HTTP and socket services.
 
 .. pfrock: https://pypi.python.org/pypi/pfrock
 

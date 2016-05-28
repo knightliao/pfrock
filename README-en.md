@@ -1,6 +1,6 @@
 # pfrock
 
-A plugin-based tool for running fake HTTP and socket services using Python.
+A plugin-based tool for running fake HTTP and socket services.
     
        _ (`-.            _  .-')                          .-. .-')
       ( (OO  )          ( \( -O )                         \  ( OO )
