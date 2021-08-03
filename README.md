@@ -206,14 +206,3 @@ https://github.com/knightliao/pfrock-demos
 - 通过mock接口，修改配置文件，无须重启pfrock，快速进行接口式开发
 - 联调过程和测试过程，亦可通过pfrock来进行部分接口mock, 避免部分服务不稳定影响整体服务能力
 
-## 群·联系·讨论
-
-- pfrock技术QQ群: 545511264 
-- 有态度无广告的搜索引擎: https://www.sov5.com
-- 微读 - 高品质阅读: http://www.100weidu.com
-- Python中国社区: http://www.python88.com
-- Disconf - 分布式配置管理平台: http://github.com/knightliao/disconf
-- CanalX - 基于 `Canal` 的数据感知服务框架: http://github.com/knightliao/canalX
-- jutf - Java Unit Test Framework: https://github.com/knightliao/jutf
-- pfrock - A plugin-based server for running fake HTTP services (especially SOA service): https://github.com/knightliao/pfrock
-- pdbsync - configurable db sync tool using python: https://github.com/knightliao/pdbsync
