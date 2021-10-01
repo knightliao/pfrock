@@ -1,4 +1,4 @@
-tornado
+tornado==4.5.1
 pfrock-proxy-plugin==0.2.1
 pfrock-http-plugin==0.2.1
 pfrock-static-plugin==0.2.7

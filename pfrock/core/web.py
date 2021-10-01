@@ -4,7 +4,8 @@ import logging
 import pprint
 
 import tornado
-from tornado.web import RedirectHandler, _unquote_or_none, ErrorHandler
+from tornado.web import RedirectHandler, ErrorHandler
+from tornado.routing import _unquote_or_none
 
 from pfrock.core.constants import ROUTER_METHOD
 
@@ -33,7 +34,7 @@ class MyApplication(tornado.web.Application):
                         handler._request_summary(), request_time)
 
 
-class _MyRequestDispatcher(tornado.web._RequestDispatcher):
+class _MyRequestDispatcher(tornado.web._HandlerDelegate):
     def _find_handler(self):
         # Identify the handler to use as soon as we have the request.
         # Save url path arguments for later.
