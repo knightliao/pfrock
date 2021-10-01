@@ -1,5 +1,1 @@
-*.pyc
-.idea
-build
-dist
-pfrock.egg-info
+/.idea/
